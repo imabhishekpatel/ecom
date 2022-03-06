@@ -1,0 +1,27 @@
+{% extends 'custom/master.html' %}
+{% block title %}{{prod.name}}{% endblock %}
+{% block body %}
+{% load ratings %}
+<div class='row'>
+    
+	<div class='col-sm-6 col-md-4'>
+  <div class="card" style="width: 18rem;">
+	<img src="{{prod.image.url}}" class="card-img-top" alt="...">
+	<div class="card-body">
+	  <h5 class="card-title">{{prod.name}},{{prod.brand}}</h5>
+	  <h6>{{prod.price}},{{prod.discount}}</h6>
+	  <p>{{prod.desc}}</p> 
+	  <p>{% ratings prod %}</p>
+	  <p>
+	  <a href="#" class="btn btn-primary">next</a>
+	  
+	  	   </p>
+	</div>
+  </div>
+  </div>
+  
+  
+  </div>
+
+
+{% endblock %}
